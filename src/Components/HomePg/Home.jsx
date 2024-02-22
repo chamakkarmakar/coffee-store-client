@@ -1,12 +1,12 @@
 import React from 'react'
 import NavBar from '../CommonSection/NavBar'
-import { Outlet } from 'react-router-dom'
+import Banner from './Banner'
+
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
-      <Outlet />
+    <Banner />
     </div>
   )
 }
