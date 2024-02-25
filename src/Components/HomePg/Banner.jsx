@@ -1,8 +1,8 @@
 import React from 'react'
-import banner from '../../assets/espresso-surrounded-by-scattered-coffee-beans-dark-surface.jpg'
+import banner from '../../assets/banner23.jpg'
 const Banner = () => {
     return (
-        <div className='max-w-full max-h-screen mt-[-150px] bg-cover bg-no-repeat py-80 flex md:justify-end justify-center'
+        <div className='max-w-full h-[615px] bg-cover bg-no-repeat flex justify-end items-center'
             style={{ backgroundImage: `url(${banner})` }}
         >
             <div className='md:w-1/3 w-full md:mx-16 mx-5 md:block hidden'>
