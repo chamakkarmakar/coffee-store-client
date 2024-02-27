@@ -18,11 +18,11 @@ const Products = () => {
       <div className='text-center text-coffee1'>
         <small>--- Sip & Savor ---</small>
         <h1 style={{ fontFamily: 'Shadows Into Light' }} className='text-4xl font-bold'>Our Popular Products</h1>
-        <button className='bg-coffee5 my-4 py-1 px-2 rounded font-semibold border-2 border-coffee1'>Add Coffee <FaCoffee className='inline w-5 h-5' /></button>
+        <button style={{ fontFamily: 'Shadows Into Light' }} className='bg-coffee5 my-4 py-1 px-3 rounded font-semibold border-2 border-coffee1'>Add Coffee <FaCoffee className='inline w-5 h-5' /></button>
       </div>
 
-      <div className="w-9/12 mx-auto">
-        <div className='grid grid-cols-2 place-items-center gap-5 my-10'>
+      <div className="md:w-9/12 mx-auto">
+        <div className='grid md:grid-cols-2 grid-cols-1 place-items-center gap-5 my-10'>
           {
             products.map(product =>
               <div key={product.id} className='w-4/5 h-40 bg-coffee6 flex justify-between items-center'>
