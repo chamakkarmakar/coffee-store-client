@@ -14,6 +14,10 @@ export default {
       'coffee3': '#794028',
       'coffee4': '#BE7656',
       'coffee5': '#EFC3A4',
+      'coffee6': '#ECE0D1',
+      'orange': '#fdba74',
+      'red': '#dc2626',
+      "dark": '#18181b',
       "white": '#ffffff'
     }
   },
