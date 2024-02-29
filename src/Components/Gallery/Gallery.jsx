@@ -13,10 +13,10 @@ const Gallery = () => {
         <div className='my-20'>
             <div className='text-center text-coffee1 mb-14'>
                 <small> Follow Us Now</small>
-                <h1 style={{ fontFamily: 'Shadows Into Light' }} className='text-4xl font-bold'>Follow On Instagram</h1>
+                <h1 className='text-4xl font-bold font-style'>Follow On Instagram</h1>
             </div>
-            <div className='w-3/5 mx-auto'>
-            <div className="grid grid-cols-4 gap-5">
+            <div className='md:w-3/5 w-4/5 mx-auto'>
+            <div className="grid md:grid-cols-4 grid-cols-2 gap-3">
                 <img className='rounded-md' src={cup1} alt="" />
                 <img className='rounded-md' src={cup2} alt="" />
                 <img className='rounded-md' src={cup3} alt="" />

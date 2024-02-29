@@ -5,7 +5,7 @@ import { FaAward } from "react-icons/fa6";
 const Services = () => {
     return (
         <div className='bg-coffee5 py-14 mb-20'>
-            <div className="md:w-3/4 w-full grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-3 md:mx-auto mx-10">
+            <div className="md:w-3/4 w-full grid md:grid-cols-4 place-items-center grid-cols-2 md:gap-5 gap-3 md:mx-auto mx-10">
                 <div className='md:w-52 w-36 text-coffee2'>
                     <GiCoffeeCup className='w-16 h-16 mb-3'/>
                     <h2 className='font-semibold text-2xl mb-2' style={{fontFamily:'Shadows Into Light'}}>Awsome Aroma</h2>

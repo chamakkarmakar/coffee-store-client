@@ -1,4 +1,7 @@
-
+.font-style {
+    font-family: 'Shadows Into Light';
+    /* text-shadow: 5px 2px #BE7656; */
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
