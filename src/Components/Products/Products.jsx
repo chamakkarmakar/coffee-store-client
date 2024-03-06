@@ -4,6 +4,7 @@ import productImg from "../../assets/images/1.png"
 import { FaCoffee } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { MdEdit, MdDelete } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -19,7 +20,7 @@ const Products = () => {
         <small>--- Sip & Savor ---</small>
         <h1 className='text-4xl font-bold font-style'>Our Popular Products</h1>
         <button className='bg-coffee5 hover:bg-transparent my-4 py-1 px-3 rounded font-semibold border-2 border-coffee1 font-style'>
-          Add Coffee <FaCoffee className='inline w-5 h-5' />
+         <Link to="/add"> Add Coffee <FaCoffee className='inline w-5 h-5' /></Link>
           </button>
       </div>
 
@@ -35,9 +36,9 @@ const Products = () => {
                   <p><span className="font-bold">Price:</span> {product.price} </p>
                 </div>
                 <div className='pr-5'>
-                  <button className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></button>
-                  <button className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></button>
-                  <button className='block bg-red px-2 py-1 mb-2'><MdDelete className='w-5 h-5 text-white' /></button>
+                  <Link to="/" className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></Link>
+                  <Link to="/update" className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></Link>
+                  <Link to="/" className='block bg-red px-2 py-1 mb-2'><MdDelete className='w-5 h-5 text-white' /></Link>
                 </div>
               </div>)
           }

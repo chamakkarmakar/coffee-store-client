@@ -8,6 +8,7 @@ import './index.css'
 import Home from './Components/HomePg/Home';
 import Root from './Components/Root/Root';
 import AddProduct from './Components/AllForms/AddProduct';
+import UpdateProduct from './Components/AllForms/UpdateProduct';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/add",
         element: <AddProduct />
+      },
+      {
+        path: "/update",
+        element: <UpdateProduct />
       }
     ]
   }
