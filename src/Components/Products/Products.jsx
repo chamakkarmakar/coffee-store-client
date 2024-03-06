@@ -18,7 +18,9 @@ const Products = () => {
       <div className='text-center text-coffee1'>
         <small>--- Sip & Savor ---</small>
         <h1 className='text-4xl font-bold font-style'>Our Popular Products</h1>
-        <button className='bg-coffee5 my-4 py-1 px-3 rounded font-semibold border-2 border-coffee1 font-style'>Add Coffee <FaCoffee className='inline w-5 h-5' /></button>
+        <button className='bg-coffee5 hover:bg-transparent my-4 py-1 px-3 rounded font-semibold border-2 border-coffee1 font-style'>
+          Add Coffee <FaCoffee className='inline w-5 h-5' />
+          </button>
       </div>
 
       <div className="md:w-9/12 mx-auto">
