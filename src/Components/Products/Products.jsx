@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import bgProduct from "../../assets/images/more/1.png"
-import productImg from "../../assets/images/1.png"
 import { FaCoffee } from "react-icons/fa";
-import { IoEye } from "react-icons/io5";
-import { MdEdit, MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import Product from './Product';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('coffeeProducts.json')
+    fetch('http://localhost:5000/allCoffee')
       .then(res => res.json())
       .then(data => setProducts(data))
   }, [])
@@ -28,19 +26,8 @@ const Products = () => {
         <div className='grid md:grid-cols-2 grid-cols-1 place-items-center gap-5 my-10'>
           {
             products.map(product =>
-              <div key={product.id} className='w-4/5 h-40 bg-coffee6 flex justify-between items-center'>
-                <img className='h-40' src={productImg} alt="" />
-                <div className='text-sm'>
-                  <p><span className="font-bold">Name:</span> {product.product_name} </p>
-                  <p><span className="font-bold">Chef:</span> {product.chef} </p>
-                  <p><span className="font-bold">Price:</span> {product.price} </p>
-                </div>
-                <div className='pr-5'>
-                  <Link to="/" className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></Link>
-                  <Link to="/update" className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></Link>
-                  <Link to="/" className='block bg-red px-2 py-1 mb-2'><MdDelete className='w-5 h-5 text-white' /></Link>
-                </div>
-              </div>)
+             <Product  key={product._id} product={product} />
+              )
           }
         </div>
       </div>
