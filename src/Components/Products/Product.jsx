@@ -4,7 +4,6 @@ import { MdEdit, MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const Product = ({ product,handleDelete }) => {
-  
   return (
     <div className='w-4/5 h-40 bg-coffee6 flex justify-between items-center'>
       <img className='h-40' src={product.photo} alt="" />
@@ -15,7 +14,7 @@ const Product = ({ product,handleDelete }) => {
       </div>
       <div className='pr-5'>
         <Link to="/" className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></Link>
-        <Link to="/update" className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></Link>
+        <Link to={`/update/${product._id}`} className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></Link>
         <Link onClick={()=>handleDelete(product._id)} to="/" className='block bg-red px-2 py-1 mb-2'><MdDelete className='w-5 h-5 text-white' /></Link>
       </div>
     </div>
