@@ -13,7 +13,7 @@ const Product = ({ product,handleDelete }) => {
         <p><span className="font-bold">Price:</span> {product.price} </p>
       </div>
       <div className='pr-5'>
-        <Link to="/" className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></Link>
+        <Link to={`/product/${product._id}`} className='block bg-orange px-2 py-1 mb-2'><IoEye className='w-5 h-5 text-white' /></Link>
         <Link to={`/update/${product._id}`} className='block bg-dark px-2 py-1 mb-2'><MdEdit className='w-5 h-5 text-white' /></Link>
         <button onClick={()=>handleDelete(product._id)} className='block bg-red px-2 py-1 mb-2'><MdDelete className='w-5 h-5 text-white' /></button>
       </div>

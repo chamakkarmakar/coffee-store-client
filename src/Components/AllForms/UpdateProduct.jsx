@@ -29,7 +29,7 @@ const UpdateProduct = () => {
         event.target.reset();
     }
   return (
-    <div className='bg-cover  bg-no-repeat' style={{ backgroundImage: `url(${bgAdd})` }}>
+    <div className='bg-cover bg-no-repeat' style={{ backgroundImage: `url(${bgAdd})` }}>
     <button className='my-10 ml-20'>
         <Link to="/" className='font-style text-lg font-semibold text-coffee2'>
             <FaArrowLeftLong className='inline' /> Back To Home

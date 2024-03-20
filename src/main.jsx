@@ -9,6 +9,8 @@ import Home from './Components/HomePg/Home';
 import Root from './Components/Root/Root';
 import AddProduct from './Components/AllForms/AddProduct';
 import UpdateProduct from './Components/AllForms/UpdateProduct';
+import Footer from './Components/CommonSection/Footer';
+import ProductDetails from './Components/Products/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <UpdateProduct />,
+        loader: ({params})=>fetch(`http://localhost:5000/allCoffee/${params.id}`)
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
         loader: ({params})=>fetch(`http://localhost:5000/allCoffee/${params.id}`)
       }
     ]
