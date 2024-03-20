@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import bgAdd from "../../assets/images/more/11.png"
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
@@ -23,7 +24,20 @@ const AddProduct = () => {
             body: JSON.stringify(newCoffee)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+               if(data.insertedId){
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "You Added Coffee Successfully",
+                    width: "30%",
+                    height: "15%",
+                    showConfirmButton: false,
+                    timer: 3000
+                  });
+               }
+            })
 
         event.target.reset();
     }
